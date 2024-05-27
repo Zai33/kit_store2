@@ -98,9 +98,9 @@ const TitleBar = () => {
         className=" items-center justify-evenly gap-2 bg-white relative rounded-full shadow-sm shadow-teal-800 hidden sm:flex"
       >
         <input
-          type="text"
+          type="search"
           placeholder="search"
-          className="px-4 md:px-6 py-2 rounded-full border-lime-600 w-[200px] md:w-[300px] lg:w-[400px] text-slate-400"
+          className="px-4 md:px-6 py-2 rounded-full shadow-md shadow-teal-400 w-[200px] md:w-[300px] lg:w-[400px] text-slate-400 outline-none"
         />
         <FaSearch
           size={20}

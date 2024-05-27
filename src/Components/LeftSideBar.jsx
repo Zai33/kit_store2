@@ -1,4 +1,10 @@
-import { FaHome, FaPlus, FaSave, FaUserFriends } from "react-icons/fa";
+import {
+  FaArrowDown,
+  FaHome,
+  FaPlus,
+  FaSave,
+  FaUserFriends,
+} from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const LeftSideBar = () => {
@@ -36,19 +42,19 @@ const LeftSideBar = () => {
     {
       id: 7,
       link: "See More...",
-      icon: <FaHome size={25} />,
+      icon: <FaArrowDown size={25} />,
     },
   ];
 
   return (
-    <div className=" bg-gradient-to-b from-blue-500 to bg-cyan-400 h-full sm:flex md:w-[200px] lg:w-[300px] px-6 py-6 fixed  flex-col items-center justify-normal hidden">
+    <div className=" bg-gradient-to-b from-blue-500 to bg-cyan-400 sm:flex md:w-[200px] lg:w-[300px] px-6 py-6 fixed  flex-col items-center justify-normal hidden">
       {/* Uppper */}
 
       <ul className="flex flex-col">
         {links.map(({ id, link, icon }) => (
           <li
             key={id}
-            className=" flex items-center  gap-8 py-4 cursor-pointer hover:scale-105 duration-100"
+            className=" flex items-center  gap-8 py-4 cursor-pointer hover:scale-100 duration-200 hover:underline text-white"
           >
             <div className=" text-white">{icon}</div>
             <Link

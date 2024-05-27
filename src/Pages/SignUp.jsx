@@ -27,7 +27,7 @@ const SignUp = () => {
         <form
           action=""
           method="get"
-          className="flex flex-col items-center justify-center px-8 py-4 gap-y-10 mr-32"
+          className="flex flex-col items-center justify-center px-8 py-4 gap-y-8 mr-16"
         >
           <div className=" flex flex-col items-start">
             <p className=" text-5xl font-bold text-teal-500 mt-2">
@@ -41,7 +41,7 @@ const SignUp = () => {
             </p>
           </div>
           {/* input form */}
-          <div className="grid grid-cols-2 gap-y-8 gap-x-4">
+          <div className="grid grid-cols-2 gap-y-8 gap-x-4 w-[600px]">
             <div className="flex flex-col justify-center gap-2">
               <label for="user-name">Name</label>
               <input
@@ -115,17 +115,19 @@ const SignUp = () => {
               <label for="user_agree">
                 I agree{" "}
                 <span className=" text-blue-600 underline cursor-pointer">
-                  Terms of Services
+                  Terms of Services{" "}
                 </span>
                 and
                 <span className=" text-blue-600 underline cursor-pointer">
+                  {" "}
                   Privacy Policy
                 </span>
               </label>
             </div>
             <motion.button
               {...buttonClick}
-              className="flex items-center justify-center gap-3 bg-emerald-600 rounded-md shadow-md shadow-teal-400 px-16 py-1 text-white cursor-pointer mb-2"
+              {...slideTop}
+              className="flex items-center justify-center gap-3 bg-emerald-600 w-[300px] rounded-md shadow-md shadow-teal-400 px-16 py-2 text-white cursor-pointer mb-2 hover:bg-blue-500"
             >
               <AiOutlineLogin size={25} />
               SignUp
