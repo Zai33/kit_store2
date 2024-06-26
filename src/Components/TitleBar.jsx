@@ -11,9 +11,8 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { MdNotifications } from "react-icons/md";
-import {} from "react-icons/pi";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { buttonClick, slideTop } from "../animation";
 
 const TitleBar = () => {
@@ -112,7 +111,7 @@ const TitleBar = () => {
         {...slideTop}
         className="flex items-center justify-center gap-2 md:gap-4"
       >
-        <div className="flex relative">
+        <Link to="/Chat" className="flex relative">
           <FaFacebookMessenger
             size={25}
             className=" text-white hover:scale-110 duration-150 cursor-pointer"
@@ -120,7 +119,7 @@ const TitleBar = () => {
           <div className=" flex items-center justify-center w-4 h-4 rounded-full bg-red-500 absolute -top-2 -right-1">
             <p className=" text-white text-xs md:text-sm">2</p>
           </div>
-        </div>
+        </Link>
 
         <motion.div {...slideTop} className="flex relative">
           <MdNotifications
@@ -138,7 +137,7 @@ const TitleBar = () => {
             className=" text-white hover:scale-110 duration-150 cursor-pointer"
           />
         ) : (
-          <>
+          <Link to="/">
             <motion.button
               {...buttonClick}
               className=" px-2 md:px-4 py-1 md:py-2 bg-teal-600 rounded-md text-white hover:bg-sky-800 hover:scale-105 duration-100 cursor-pointer"
@@ -146,7 +145,7 @@ const TitleBar = () => {
             >
               Login
             </motion.button>
-          </>
+          </Link>
         )}
       </motion.div>
     </div>

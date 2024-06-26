@@ -7,6 +7,7 @@ module.exports = {
         roboto: ["Roboto"],
         noto: ["Noto Serif"],
         dancing: ["Dancing Script"],
+        beauty: ["Gwendolyn"],
       },
       colors: {
         secondary: {
@@ -23,5 +24,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

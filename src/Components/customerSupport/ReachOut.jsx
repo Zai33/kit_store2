@@ -1,8 +1,15 @@
-import React from "react";
+/* eslint-disable jsx-a11y/iframe-has-title */
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { buttonClick } from "../animation/index";
+import { buttonClick } from "../../animation/index";
 
 const ReachOut = () => {
+  const name = useRef("");
+  const email = useRef("");
+  const message = useRef("");
+
+  const handleSubmit = () => {};
+
   return (
     <div className=" flex flex-col items-center justify-center gap-4 bg-blue-500 w-full mt-10 px-8 py-8">
       <div className="flex items-center justify-center gap-4">
@@ -31,8 +38,9 @@ const ReachOut = () => {
           ></iframe>
         </div>
         <form
-          action=""
-          method="get"
+          // action=""
+          // method="get"
+          onSubmit={() => handleSubmit()}
           className=" flex flex-col items-start justify-center gap-y-4 mt-4 "
         >
           <div className="flex flex-col gap-4">
@@ -41,6 +49,7 @@ const ReachOut = () => {
               type="text"
               id="user_name"
               name="fullname"
+              ref={name}
               required
               autoSave="false"
               className=" px-4 py-2 rounded-lg outline-none w-[300px] shadow-lg shadow-purple-400"
@@ -52,6 +61,7 @@ const ReachOut = () => {
               type="email"
               name="email"
               id="email"
+              ref={email}
               required
               className=" px-4 py-2 rounded-lg outline-none w-[300px] shadow-lg shadow-purple-400"
             />
@@ -61,7 +71,8 @@ const ReachOut = () => {
             <textarea
               name="message"
               id="message"
-              cols={26}
+              ref={message}
+              cols={28}
               rows={5}
               className=" rounded-lg outline-none px-4 py-2 shadow-lg shadow-purple-400"
             ></textarea>
@@ -70,7 +81,9 @@ const ReachOut = () => {
             {...buttonClick}
             className=" bg-white rounded-md w-32 cursor-pointe ml-[82px] shadow-md shadow-purple-500 hover:bg-green-500"
           >
-            <button className=" px-8 py-2">Request</button>
+            <button className=" px-8 py-2" type="submit">
+              Request
+            </button>
           </motion.div>
         </form>
       </div>

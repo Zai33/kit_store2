@@ -1,13 +1,11 @@
 import React from "react";
-import ContactUs from "../Components/ContactUs";
-import ReachOut from "../Components/ReachOut";
-import AboutUs from "../Components/AboutUs";
+import AboutUs from "../Components/customerSupport/AboutUs";
+import ContactUs from "../Components/customerSupport/ContactUs";
 
 const Contact = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <ContactUs />
-      <ReachOut />
       <AboutUs />
     </div>
   );
